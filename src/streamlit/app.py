@@ -71,5 +71,31 @@ ax.hist(upper["Fare"], bins=20)
 st.pyplot(fig)
 st.markdown("As shown by the graph above, most of the passengers travelling in upper class paid around £25 to £75 for their tickets in the Titanic.")
 st.markdown("There’s also a possible outlier, who paid £500 for their ticket.")
+# Ticket Fare by middle class
+st.subheader("Ticket Fare Paid by Middle Class")
+fig, ax = plt.subplots()
+ax.hist(middle["Fare"], bins=20)
+st.pyplot(fig)
+st.markdown("In comparison to the tickets bought by the upper class, the middle class ticket fares do not exceed £100 pounds. The data is concentrated around the £7 to £30 range too. This suggests that the middle class paid significantly lower amounts for their tickets.")
+# Ticket Fare by lower class
+st.subheader("Ticket Fare Paid by Lower Class")
+fig, ax = plt.subplots()
+ax.hist(lower["Fare"], bins=20)
+st.pyplot(fig)
+st.markdown("Finally, the majority of the lower class bought their tickets for less than £10 pounds. They also are the class with most passengers (491) aboard the Titanic.")
+# Age by Class
+st.subheader("Ages by Upper, Middle and Lower Class")
+fig, ax = plt.subplots(nrows=1, ncols=3)
+ax[0].hist(upper["Age"], bins=20)
+ax[1].hist(middle["Age"], bins=20)
+ax[2].hist(lower["Age"], bins=20)
+st.pyplot(fig)
+st.markdown("By analizing the ages distributed along the upper, middle and lower classes:")
+st.markdown("The ages of the upper class range from 0 to 80, and show a greater concentration in the middle range (30 to 50 years-old). This is the only class in which ages exceed 75.")
+st.markdown("The ages of the middle class range from 0 to 70, and show a greater concentration in the range from (roughly) 18 to 25. This class has the most variety in the ages of children, and holds the biggest amount of newly-born babies. ")
+st.markdown("The ages of the lower class range from 0 to 74, and show a greater concentration in the range from 20 to 30. This suggests that most of the passengers were in working age. ")
+
+# Data Analysis by Gender
+
 
 #st.markdown("")
