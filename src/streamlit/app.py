@@ -95,7 +95,12 @@ st.markdown("The ages of the upper class range from 0 to 80, and show a greater 
 st.markdown("The ages of the middle class range from 0 to 70, and show a greater concentration in the range from (roughly) 18 to 25. This class has the most variety in the ages of children, and holds the biggest amount of newly-born babies. ")
 st.markdown("The ages of the lower class range from 0 to 74, and show a greater concentration in the range from 20 to 30. This suggests that most of the passengers were in working age. ")
 
-# Data Analysis by Gender
-
-
-#st.markdown("")
+# Data Analysis by Sex
+st.subheader("Sex by Upper, Middle and Lower Class")
+fig, ax = plt.subplots(nrows=1, ncols=3)
+ax[0].hist(upper["Sex"])
+ax[1].hist(middle["Sex"])
+ax[2].hist(lower["Sex"])
+st.pyplot(fig)
+st.markdown("As shown by the graphs, the upper class had the most female passengers among the other groups, and the shortest gap between passenger sexes.")
+st.markdown("Meanwhile, the lower classes has the biggest gap between their female and male passengers.")
